@@ -1,7 +1,7 @@
 {
-  "name": "nginx-dev",
   "build": {
     "dockerfile": "Dockerfile"
   },
-  "forwardPorts": [80]
+  "forwardPorts": [80],
+  "postCreateCommand": "echo '🌐 Nginx listo en puerto 80!'"
 }
