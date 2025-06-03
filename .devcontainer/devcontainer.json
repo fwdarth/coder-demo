@@ -1,6 +1,6 @@
 {
   "name": "nginx-dev",
-  "image": "nginx:latest",
-  "forwardPorts": [80],
-  "postCreateCommand": "cp /workspaces/nginx-devcontainer/index.html /usr/share/nginx/html/index.html && nginx -g 'daemon off;'"
+  "image": "debian:bullseye",
+  "forwardPorts": [8080],
+  "postCreateCommand": "apt update && apt install -y nginx && cp /workspaces/coder-demo/index.html /var/www/html/index.html && nginx -g 'daemon off;'"
 }
